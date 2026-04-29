@@ -42,6 +42,7 @@
 		<h1 class="masthead">Eddie Browser</h1>
 		<nav>
 			<ul>
+				<li class="seasons"><a href="Default" onclick="changeSeason(this); return false;">Default</a></li>
 				<li class="seasons"><a href="Spring" onclick="changeSeason(this); return false;">Spring</a></li>
 				<li class="seasons"><a href="Summer" onclick="changeSeason(this); return false;">Summer</a></li>
 				<li class="seasons"><a href="Fall" onclick="changeSeason(this); return false;">Fall</a></li>
@@ -55,6 +56,7 @@
 	<div>
 		<p>The colors of the seasonal images are as follows:</p>
 		<ul class="colors">
+			<li>Default: <b>#ccc</b></li>
 			<li>Spring: <b>#2B7129</b></li>
 			<li>Summer: <b>#EBA52B</b></li>
 			<li>Fall: <b>#A81124</b></li>
@@ -134,8 +136,13 @@
 					html.style.backgroundColor = "#005393";
 					banner.textContent = "Winter flurries bring cold shoulders!";
 				break;
-					html.style.backgroundColor = "grey";
+
+				case "default":
+					html.style.backgroundColor = "#ccc";
 					banner.textContent = "Default";
+				break;
+
+
 				default: 
 			}
 
